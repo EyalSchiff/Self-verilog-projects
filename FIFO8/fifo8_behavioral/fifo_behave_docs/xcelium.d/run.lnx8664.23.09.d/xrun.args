@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+fifo_behavioral2.v
+fifo_behavioral_TB.v
++access+rwc
+-gui
+-clean

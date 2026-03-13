@@ -1,0 +1,4 @@
+./counter/counter.v
+./decoder3to8/decoder3to8.v
+./mux8to3_64b/mux8to3_64b.v
+./reg64b_en/reg64b_en.v

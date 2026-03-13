@@ -1,0 +1,144 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Mar 12, 2026 at 18:18:16 UTC
+xrun
+	decoder3to8.v
+	decoder3to8_TB.v
+	+access+rwc
+	-gui
+	-clean
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+file: decoder3to8.v
+	module worklib.decoder_3to8:v
+		errors: 0, warnings: 0
+file: decoder3to8_TB.v
+	module worklib.decoder_3to8_tb:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmelab: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmelab: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		decoder_3to8_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+		worklib.decoder_3to8:v <0x71044b3d>
+			streams:   1, words:   606
+		worklib.decoder_3to8_tb:v <0x5a2eab89>
+			streams:   4, words:  7280
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 2       2
+		Registers:               4       4
+		Scalar wires:            1       -
+		Vectored wires:          2       -
+		Always blocks:           1       1
+		Initial blocks:          2       2
+		Pseudo assignments:      2       -
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.decoder_3to8_tb:v
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmsim: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmsim: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /tools/cadence/XCELIUM/23.09.013/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm decoder_3to8_tb.IN decoder_3to8_tb.enable decoder_3to8_tb.i decoder_3to8_tb.out
+Created probe 1
+xcelium> run
+Starting Decoder 3-to-8 Test...
+xmsim: *W,SHMOFU: $shm_open - file waves.shm already in use (SHM database).
+            File: ./decoder3to8_TB.v, line = 52, pos = 16
+           Scope: decoder_3to8_tb
+            Time: 0 FS + 0
+
+xmsim: *W,SHMNOSO: $shm_probe - SHM file not opened with $shm_open.
+            File: ./decoder3to8_TB.v, line = 53, pos = 17
+           Scope: decoder_3to8_tb
+            Time: 0 FS + 0
+
+Time=10000 | enable=0 | IN=101 | out=00000000 (Expected: 00000000)
+Time=20000 | enable=1 | IN=000 | out=00000001
+Time=30000 | enable=1 | IN=001 | out=00000010
+Time=40000 | enable=1 | IN=010 | out=00000100
+Time=50000 | enable=1 | IN=011 | out=00001000
+Time=60000 | enable=1 | IN=100 | out=00010000
+Time=70000 | enable=1 | IN=101 | out=00100000
+Time=80000 | enable=1 | IN=110 | out=01000000
+Time=90000 | enable=1 | IN=111 | out=10000000
+-------------------------------------------------
+Test Finished Successfully.
+Simulation complete via $finish(1) at time 90 NS + 0
+./decoder3to8_TB.v:47         $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.09-s013: Exiting on Mar 12, 2026 at 18:22:44 UTC  (total: 00:04:28)

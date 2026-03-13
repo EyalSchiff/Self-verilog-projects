@@ -1,0 +1,1 @@
+s1(13Mar2026:12:02:21):  xrun fifo_behavioral2.v fifo_behavioral_TB.v +access+rwc -gui -clean 

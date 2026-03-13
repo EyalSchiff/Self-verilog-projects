@@ -1,0 +1,5 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(12Mar2026:18:18:17):( xrun decoder3to8.v decoder3to8_TB.v +access+rwc -gui -clean )

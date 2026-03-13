@@ -1,0 +1,9 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Mar 13, 2026 at 13:40:16 UTC
+xrun
+	fifo8_equal_check_TB.v
+	+access+rwc
+	-gui
+	-clean
+xrun: *E,FILEMIS: Cannot find the provided file fifo8_equal_check_TB.v.
+TOOL:	xrun(64)	23.09-s013: Exiting on Mar 13, 2026 at 13:40:17 UTC  (total: 00:00:01)

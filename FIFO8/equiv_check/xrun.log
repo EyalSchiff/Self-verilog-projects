@@ -1,0 +1,180 @@
+xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	23.09-s013: Started on Mar 13, 2026 at 14:07:25 UTC
+xrun
+	fifo8_equal_check_TB.v
+	-incdir fifo8_structural
+	+access+rwc
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+Recompiling... reason: file './fifo8_equal_check_TB.v' is newer than expected.
+	expected: Fri Mar 13 14:03:12 2026
+	actual:   Fri Mar 13 14:07:15 2026
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+file: fifo8_equal_check_TB.v
+	module worklib.fifo8_equivalence_check_tb:v
+		errors: 0, warnings: 0
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 2
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmelab: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmelab: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		fifo8_equivalence_check_tb
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+		worklib.fifo8_equivalence_check_tb:v <0x49acf321>
+			streams:  10, words: 30834
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                16       7
+		Registers:              24      15
+		Scalar wires:           14       -
+		Expanded wires:          8       1
+		Vectored wires:         17       -
+		Always blocks:          16       7
+		Initial blocks:          1       1
+		Cont. assignments:       2       6
+		Pseudo assignments:      7       -
+		Process Clocks:         12       3
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.fifo8_equivalence_check_tb:v
+SOFTINCLUDE $XPEDION/aa/cds.lib
+|
+xmsim: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
+SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
+|
+xmsim: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
+Loading snapshot worklib.fifo8_equivalence_check_tb:v .................... Done
+xcelium> source /tools/cadence/XCELIUM/23.09.013/tools/xcelium/files/xmsimrc
+xcelium> run
+========================================
+Starting Smart FIFO Verification...
+========================================
+[PASS] TEST 1: Reset correct (empty_b=1, full_b=0)
+ [               40000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [               60000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [               80000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [              100000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [              120000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [              140000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [              160000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
+ [              180000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(1,0) Struct(1,0)
+[PASS] TEST 2: FIFO full_b logic verified
+ [              200000] SCOREBOARD: Match! Data: 0000000000000001 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              220000] SCOREBOARD: Match! Data: 0000000000000002 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              240000] SCOREBOARD: Match! Data: 0000000000000003 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              260000] SCOREBOARD: Match! Data: 0000000000000004 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              280000] SCOREBOARD: Match! Data: 0000000000000005 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              300000] SCOREBOARD: Match! Data: 0000000000000006 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              320000] SCOREBOARD: Match! Data: 0000000000000007 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              340000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,1) Struct(0,1)
+[PASS] TEST 3: FIFO empty_b logic verified
+ [              360000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              380000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              400000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              420000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              440000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
+ [              460000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              480000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              500000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              520000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              540000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,1) Struct(0,1)
+ [              560000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              580000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              600000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              620000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              640000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              660000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              680000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
+ [              700000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(1,0) Struct(1,0)
+[PASS] TEST 4: Pointer wrap-around works perfectly
+TEST 5: Ping-Pong on full_b condition...
+ [              720000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(1,0) Struct(1,0)
+[PASS] TEST 5: Simultaneous R/W allowed on full_b. FIFO remained full_b.
+ [              740000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              760000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              780000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              800000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              820000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              840000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              860000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
+ [              880000] SCOREBOARD: Match! Data: 000000000000cccc | Flags (F,E): behave(0,1) Struct(0,1)
+TEST 6: Ping-Pong on empty_b condition...
+ [              900000] SCOREBOARD: Match! Data: 000000000000cccc | Flags (F,E): behave(0,0) Struct(0,0)
+[PASS] TEST 6: Read blocked safely, Write passed.
+TEST 7: Normal Ping-Pong (Mid-level)...
+ [              920000] SCOREBOARD: Match! Data: 000000000000dddd | Flags (F,E): behave(0,0) Struct(0,0)
+[PASS] TEST 7: Normal Ping-Pong passed.
+TEST 8: Async Reset execution...
+[PASS] TEST 8: Async Reset instantly interrupted operation.
+========================================
+Verification Complete.
+========================================
+Simulation complete via $finish(1) at time 987 NS + 0
+./fifo8_equal_check_TB.v:185         #50 $finish;
+xcelium> exit
+TOOL:	xrun(64)	23.09-s013: Exiting on Mar 13, 2026 at 14:07:29 UTC  (total: 00:00:04)

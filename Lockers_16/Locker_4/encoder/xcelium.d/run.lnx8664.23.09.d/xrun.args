@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+encoder_4to2_TB.v
+encoder_4to2.v
++access+rwc
+-gui
+-clean

@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+decoder3to8.v
+decoder3to8_TB.v
++access+rwc
+-gui
+-clean

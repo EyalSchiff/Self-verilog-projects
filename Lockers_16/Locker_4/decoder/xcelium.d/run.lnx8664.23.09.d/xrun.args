@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+decoder_2to4_TB.v
+decoder_2to4.v
++access+rwc
+-gui
+-clean

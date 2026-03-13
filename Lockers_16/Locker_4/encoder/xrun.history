@@ -1,0 +1,2 @@
+s1(10Mar2026:17:46:28):  xrun encoder_4to2_TB.v encoder_4to2.v +access+rwc -gui -clean 
+s2(10Mar2026:17:49:39):  xrun encoder_4to2_TB.v encoder_4to2.v +access+rwc -gui -clean 

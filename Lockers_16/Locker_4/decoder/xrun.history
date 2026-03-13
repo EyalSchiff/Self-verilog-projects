@@ -1,0 +1,2 @@
+s1(10Mar2026:16:53:00):  xrun decoder_4to2_TB.v decoder_4to2.v +access+rwc -gui -clean 
+s2(10Mar2026:16:53:52):  xrun decoder_2to4_TB.v decoder_2to4.v +access+rwc -gui -clean 

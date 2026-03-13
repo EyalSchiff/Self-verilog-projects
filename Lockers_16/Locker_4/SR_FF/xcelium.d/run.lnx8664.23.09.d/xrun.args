@@ -1,0 +1,9 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+SR_FF_TB.v
+SR_FF.v
++access+rwc
+-gui
+-clean

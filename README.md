@@ -39,15 +39,17 @@ A 16-bit priority-based resource management system emphasizing modularity, pre-p
 3. **Locker16 (Top Level):** A 16-bit architecture realized by interconnecting four Locker4 modules via a priority-bus.
 
 ### Design Philosophy & Structural Arbitration:
-Unlike behavioral models, this design mimics real-world hardware constraints using a **Reset-Priority** mechanism. The verification process focused on high-concurrency scenarios to ensure system stability.
+Unlike behavioral models, this structural design exhibits **State-Dependent Arbitration** during concurrent operations, a direct result of the underlying SRFF architecture.
 
 ### Critical Edge-Case Validation (Testbench Results):
 The Locker16 testbench was designed to challenge the structural logic and ensure robustness in critical scenarios:
 
-1. **Arbitration Priority (Pop vs. Push):**
-    * **Scenario:** A simultaneous request to occupy (`pop_valid`) and release (`push_valid`) the same locker address in a single clock cycle.
-    * **Priority Logic:** The system implements a **Reset-Priority** SRFF. The `Push` signal (Reset) structurally overrides the `Pop` (Set).
-    * **Result:** The locker remains free/empty, preventing "resource hijacking" during a hand-off between users.
+1. **State-Dependent Arbitration (Simultaneous Pop & Push):**
+    * **The Scenario:** A simultaneous request to occupy (`pop_valid`) and release (`push_valid`) the same locker address.
+    * **Observation:** The outcome depends on the current state of the cell.
+    * **Initial Empty State:** If the locker is empty, the `Pop` operation (Set) prevails as per system definition, allowing the locker to be caught.
+    * **Initial Full State:** If the locker is already full, the structural **Reset-Priority** takes over. The `Push` signal (Reset) overrides the `Pop`, resulting in the locker being released.
+    * **Result:** This dual-logic ensures the system gracefully handles hand-offs based on resource availability.
 
 2. **Saturation & Overflow Protection:**
     * **Scenario:** Filling the system to 100% capacity (16/16 lockers) and attempting an additional `Pop` allocation.

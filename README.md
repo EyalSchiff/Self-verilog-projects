@@ -42,24 +42,24 @@ A 16-bit priority-based resource management system emphasizing modularity, pre-p
 Unlike behavioral models, this design mimics real-world hardware constraints using a **Reset-Priority** mechanism. The verification process focused on high-concurrency scenarios to ensure system stability.
 
 ### Critical Edge-Case Validation (Testbench Results):
-הטסטבנץ' שבוצע עבור ה-Locker16 נועד לאתגר את הלוגיקה המבנית (Structural) ולוודא עמידות במצבים קריטיים:
+The Locker16 testbench was designed to challenge the structural logic and ensure robustness in critical scenarios:
 
 1. **Arbitration Priority (Pop vs. Push):**
-    * **Scenario:** Simultaneous request to occupy (`pop_valid`) and release (`push_valid`) the same address.
-    * **Priority:** The system implements **Reset-Priority**. The `Push` signal (Reset) overrides the `Pop` (Set). 
-    * **Result:** The locker remains free, preventing "resource hijacking" during a hand-off between users.
+    * **Scenario:** A simultaneous request to occupy (`pop_valid`) and release (`push_valid`) the same locker address in a single clock cycle.
+    * **Priority Logic:** The system implements a **Reset-Priority** SRFF. The `Push` signal (Reset) structurally overrides the `Pop` (Set).
+    * **Result:** The locker remains free/empty, preventing "resource hijacking" during a hand-off between users.
 
 2. **Saturation & Overflow Protection:**
-    * **Scenario:** Filling the system to 100% capacity (16/16) and attempting an additional `Pop`.
-    * **Result:** The `pop_ready` signal transitions to `0` asynchronously, blocking any further allocations and protecting existing data.
+    * **Scenario:** Filling the system to 100% capacity (16/16 lockers) and attempting an additional `Pop` allocation.
+    * **Result:** The `pop_ready` signal transitions to `0` asynchronously, blocking further requests and protecting existing occupied lockers from being overwritten.
 
 3. **Parallel Independence (Multi-Address Concurrency):**
-    * **Scenario:** Releasing one locker (e.g., Addr 10) while simultaneously popping another (e.g., Addr 13).
-    * **Result:** Confirmed that the Push-Decoder and Pop-Encoder operate on independent data paths without internal collisions.
+    * **Scenario:** Executing different operations on different addresses simultaneously (e.g., Releasing Locker 10 while Popping Locker 13).
+    * **Result:** Confirmed that the Push-Decoder and Pop-Encoder operate on independent data paths, proving structural isolation across the hierarchy.
 
 4. **Dynamic Priority Integrity:**
     * **Scenario:** Releasing lockers in a non-sequential order (e.g., addresses 5, 9, 13).
-    * **Result:** The Priority Encoder immediately updated `pop_address` to point to the highest available index (13) without latency.
+    * **Result:** The Priority Encoder immediately updated `pop_address` to point to the highest available index (13) without requiring additional clock cycles.
 
 ![Locker16 Waveform](https://raw.githubusercontent.com/EyalSchiff/Self-verilog-projects/main/Lockers_16/Locker16_waveform.png)
 

@@ -15,7 +15,7 @@ A high-performance synchronous FIFO memory system. This project demonstrates the
 * **Structural Hierarchy:** * **Memory Fabric:** 8x64-bit register bank (`reg64b_en`).
     * **Addressing Logic:** 3-to-8 Decoder (`decoder3to8`) for write steering.
     * **Data Retrieval:** 64-bit 8-to-1 Multiplexer (`mux8to3_64b`).
-    * **Pointer Management:** Dual 3-bit **Synchronous Counters** handling wrap-around logic.
+    * **Pointer Management:** Dual 4-bit **Synchronous Counters** handling wrap-around logic.
 * **Equivalence Verification:** A real-time **Scoreboard** monitors both models every clock cycle, ensuring 100% bit-accurate equivalence in data and flags.
 
 ### Robust Verification & Edge-Case Coverage:

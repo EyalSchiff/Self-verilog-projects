@@ -29,7 +29,7 @@ assign push_ready = push_ready3 | push_ready2 | push_ready1 | push_ready0 ;
 
 //enable of decoders depends on ready for both pop/push
 assign pop_enable = pop_valid & pop_ready;
-assign push_enable = push_valid & push_ready;
+assign push_enable = push_valid & push_ready ;
 
 
 //instantiate 4 lockers4

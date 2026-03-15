@@ -1,9 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-//
-Locker4_system.v
-Locker4_system_TB.v
-+access+rwc
--gui
--clean

@@ -182,4 +182,6 @@ Equivalence Verification Complete.
 ========================================
 Simulation complete via $finish(1) at time 580 NS + 0
 ./fifo8_equal_check_TB.v:142         #50 $finish;
-xcelium> 
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	23.09-s013: Exiting on Mar 15, 2026 at 11:50:13 UTC  (total: 00:43:48)

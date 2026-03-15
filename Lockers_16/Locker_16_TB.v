@@ -64,10 +64,26 @@ module Locker16_system_TB;
 
         #10;
 
+        //trying to pop and push on same time to highest locker
+            @(negedge clk);
+            pop_valid = 1'b1;
+            push_valid = 1'b1;
+            push_address = 4'd15;
+
+            @(negedge clk);
+            pop_valid = 1'b0;
+            push_valid = 1'b0;
+            if (push_ready == 1'b0 && pop_address == 4'd15)begin
+                $display("simultanious pop/push successful , pull address is %d" , pop_address);
+            end
+            else begin
+                $display("simultanious pop/push failed , pull address is %d" , pop_address);
+            end
+
+
         // --- STEP 2: FILL ALL 16 LOCKERS ---
         $display("Filling all 16 lockers...");
         repeat(16) begin
-            wait(pop_ready == 1'b1); // Wait until there is an empty spot
             @(negedge clk);
             pop_valid = 1;
             @(negedge clk);
@@ -76,10 +92,24 @@ module Locker16_system_TB;
 
         #50; // Pause to observe full state
 
-        // --- STEP 3: RELEASE SPECIFIC LOCKERS (5, 9, 13) ---
-        // Address 5: Locker1, Internal 1
-        // Address 9: Locker2, Internal 1
-        // Address 13: Locker3, Internal 1
+        //trying to pop and push on same time to lowest locker
+            @(negedge clk);
+            pop_valid = 1'b1;
+            push_valid = 1'b1;
+            push_address = 4'd0;
+
+            @(negedge clk);
+            pop_valid = 1'b0;
+            push_valid = 1'b0;
+            if (pop_ready == 1'b0)begin
+                $display("simultanious pop/push successful" );
+            end
+            else begin
+                $display("simultanious pop/push failed ");
+            end
+
+
+        // --- RELEASE SPECIFIC LOCKERS (5, 9, 13) ---
 
         $display("Releasing locker 5...");
         @(negedge clk);
@@ -106,9 +136,50 @@ module Locker16_system_TB;
         @(negedge clk);
         push_valid = 0;
 
+        $display("catching locker 13  and Releasing locker 10...");
+
+        @(negedge clk);
+        pop_valid = 1'b1;
+        push_valid = 1'b1;
+        push_address = 4'd10;
+        $display("pop address is %d " ,pop_address );
+
+        $display("catching locker 10  and Releasing locker 12...");
+
+        @(negedge clk);
+        pop_valid = 1'b1;
+        push_valid = 1'b1;
+        push_address = 4'd12;
+        $display("pop address now is %d " ,pop_address );
+
+
+
+
+
+
+        //trying to pop and push on same time to 12 locker
+
+        @(negedge clk);
+        pop_valid = 1'b1;
+        push_valid = 1'b1;
+        push_address = 4'd12;
+
+        @(negedge clk);
+        pop_valid = 1'b0;
+        push_valid = 1'b0;
+        if (pop_address == 4'd12)begin
+            $display("pop and push success,pop address is still %d" , pop_address );
+        end
+        else begin            
+            $display("pop and push fail,pop address is %d" , pop_address );
+        end
+
+
+
+
         #100;
         $display("Testbench complete. Check SimVision.");
         $finish;
     end
 
-endmodule
+endmodule 

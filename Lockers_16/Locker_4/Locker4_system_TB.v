@@ -53,6 +53,19 @@ module Locker4_system_TB;
 
         #10;
 
+
+        //catch and release Locker #3 when all empty ---excpected 
+        repeat(3)begin
+        @(negedge clk);
+        push_valid = 1;
+        push_address = 2'b11;
+        pop_valid = 1;
+        @(negedge clk);
+        push_valid = 0;
+        pop_valid = 0;
+        end
+
+
         // --- STEP 2: FILLING ALL LOCKERS ---
         // We change signals on the FALLING edge (negedge) 
         // to ensure stability on the next rising edge.
@@ -72,6 +85,39 @@ module Locker4_system_TB;
         push_valid = 1;
         @(negedge clk);
         push_valid = 0;
+
+        #30;
+
+        // --- STEP 4: catch LOCKER #2 and release locker #1---
+        @(negedge clk);
+        push_valid = 1;
+        push_address = 2'b01;
+        pop_valid = 1;
+        @(negedge clk);
+        push_valid = 0;
+        push_address = 2'b01;
+        pop_valid = 0;
+
+
+        #15
+        //catch Locker #1 //all locked
+        @(negedge clk);
+        pop_valid = 1;
+        
+        #15
+        //catch and release Locker #3 when all full
+        repeat(3)begin
+        @(negedge clk);
+        push_valid = 1;
+        push_address = 2'b11;
+        pop_valid = 1;
+        @(negedge clk);
+        push_valid = 0;
+        pop_valid = 0;
+        end
+
+
+
 
         #100;
         $display("Simulation Finished");

@@ -1,5 +1,5 @@
 xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s013: Started on Mar 11, 2026 at 14:02:51 UTC
+TOOL:	xrun(64)	23.09-s013: Started on Mar 15, 2026 at 15:23:23 UTC
 xrun
 	Locker_16.v
 	Locker_16_TB.v
@@ -105,8 +105,8 @@ xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds
 			streams:   2, words:   463
 		worklib.Locker16_system:v <0x6b74690d>
 			streams:   2, words:   484
-		worklib.Locker16_system_TB:v <0x64c615f5>
-			streams:  22, words: 53956
+		worklib.Locker16_system_TB:v <0x21ad2f5b>
+			streams:  22, words: 65997
 		worklib.SR_FF:v <0x2e332f24>
 			streams:   4, words:  1060
 	Building instance specific data structures.
@@ -152,13 +152,18 @@ xmsim: *W,SHMNOSO: $shm_probe - SHM file not opened with $shm_open.
            Scope: Locker16_system_TB
             Time: 15 NS + 0
 
+simultanious pop/push failed , pull address is 14
 Filling all 16 lockers...
+simultanious pop/push failed 
 Releasing locker 5...
 Releasing locker 9...
 Releasing locker 13...
+catching locker 13  and Releasing locker 10...
+pop address is 13 
+catching locker 10  and Releasing locker 12...
+pop address now is 10 
+pop and push success,pop address is still 12
 Testbench complete. Check SimVision.
-Simulation complete via $finish(1) at time 560 NS + 0
-./Locker_16_TB.v:111         $finish;
-xcelium> ^C
-xcelium> exit
-TOOL:	xrun(64)	23.09-s013: Exiting on Mar 11, 2026 at 14:32:35 UTC  (total: 00:29:44)
+Simulation complete via $finish(1) at time 640 NS + 0
+./Locker_16_TB.v:182         $finish;
+xcelium> 

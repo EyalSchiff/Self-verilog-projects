@@ -1,8 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-//
-fifo8_equal_check_TB.v
--incdir
-fifo8_structural
-+access+rwc

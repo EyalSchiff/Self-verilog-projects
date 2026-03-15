@@ -1,8 +1,0 @@
-counter/counter.v
-/project/tsmc65/users/schiffe/ws/my_special_verilog/FIFO8/fifo8_structural/counter/counter.v
-decoder3to8/decoder3to8.v
-/project/tsmc65/users/schiffe/ws/my_special_verilog/FIFO8/fifo8_structural/decoder3to8/decoder3to8.v
-mux8to3_64b/mux8to3_64b.v
-/project/tsmc65/users/schiffe/ws/my_special_verilog/FIFO8/fifo8_structural/mux8to3_64b/mux8to3_64b.v
-reg64b_en/reg64b_en.v
-/project/tsmc65/users/schiffe/ws/my_special_verilog/FIFO8/fifo8_structural/reg64b_en/reg64b_en.v

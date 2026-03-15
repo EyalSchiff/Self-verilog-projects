@@ -1,9 +1,14 @@
 xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s013: Started on Mar 13, 2026 at 14:07:25 UTC
+TOOL:	xrun(64)	23.09-s013: Started on Mar 15, 2026 at 11:06:25 UTC
 xrun
 	fifo8_equal_check_TB.v
-	-incdir fifo8_structural
+	-incdir ../fifo8_structural
+	-incdir ../fifo8_structural/counter
+	-incdir ../fifo8_structural/decoder3to8
+	-incdir ../fifo8_structural/mux8to3_64b
+	-incdir ../fifo8_structural/reg64b_en
 	+access+rwc
+	-gui
 SOFTINCLUDE $XPEDION/aa/cds.lib
 |
 xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
@@ -28,15 +33,6 @@ xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib 
 SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
 |
 xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
-SOFTINCLUDE $XPEDION/aa/cds.lib
-|
-xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
-SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
-|
-xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
-Recompiling... reason: file './fifo8_equal_check_TB.v' is newer than expected.
-	expected: Fri Mar 13 14:03:12 2026
-	actual:   Fri Mar 13 14:07:15 2026
 SOFTINCLUDE $XPEDION/aa/cds.lib
 |
 xrun: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib Invalid environment variable ''.
@@ -50,6 +46,18 @@ SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
 |
 xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
 file: fifo8_equal_check_TB.v
+	module worklib.counter:v
+		errors: 0, warnings: 0
+	module worklib.decoder_3to8:v
+		errors: 0, warnings: 0
+	module worklib.mux8to3_64bits:v
+		errors: 0, warnings: 0
+	module worklib.reg64b_en:v
+		errors: 0, warnings: 0
+	module worklib.fifo8_structural:v
+		errors: 0, warnings: 0
+	module worklib.fifo_behavioral:v
+		errors: 0, warnings: 0
 	module worklib.fifo8_equivalence_check_tb:v
 		errors: 0, warnings: 0
 	Total errors/warnings found outside modules and primitives:
@@ -84,8 +92,20 @@ xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds
 SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
 |
 xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
-		worklib.fifo8_equivalence_check_tb:v <0x49acf321>
-			streams:  10, words: 30834
+		worklib.reg64b_en:v <0x1e364f16>
+			streams:   2, words:   569
+		worklib.mux8to3_64bits:v <0x4f0519a2>
+			streams:   1, words:   604
+		worklib.decoder_3to8:v <0x2585c0e9>
+			streams:   1, words:   791
+		worklib.counter:v <0x0cc3c714>
+			streams:   2, words:   501
+		worklib.fifo_behavioral:v <0x0f692cdc>
+			streams:   6, words:  2693
+		worklib.fifo8_equivalence_check_tb:v <0x4d4012e7>
+			streams:  10, words: 22759
+		worklib.fifo8_structural:v <0x03a2f3c4>
+			streams:   3, words:   611
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -108,73 +128,58 @@ xmsim: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.lib
 SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
 |
 xmsim: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
-Loading snapshot worklib.fifo8_equivalence_check_tb:v .................... Done
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
 xcelium> source /tools/cadence/XCELIUM/23.09.013/tools/xcelium/files/xmsimrc
+xcelium> database -open waves -into waves.shm -default
+Created default SHM database waves
+xcelium> probe -create -shm fifo8_equivalence_check_tb.clk fifo8_equivalence_check_tb.data_in fifo8_equivalence_check_tb.data_out_b fifo8_equivalence_check_tb.data_out_s fifo8_equivalence_check_tb.empty_b fifo8_equivalence_check_tb.empty_s fifo8_equivalence_check_tb.full_b fifo8_equivalence_check_tb.full_s fifo8_equivalence_check_tb.i fifo8_equivalence_check_tb.neg_reset fifo8_equivalence_check_tb.re_en fifo8_equivalence_check_tb.wr_en fifo8_equivalence_check_tb.fifo_b.clk fifo8_equivalence_check_tb.fifo_b.data_in fifo8_equivalence_check_tb.fifo_b.data_out fifo8_equivalence_check_tb.fifo_b.empty fifo8_equivalence_check_tb.fifo_b.fifo_mem fifo8_equivalence_check_tb.fifo_b.full fifo8_equivalence_check_tb.fifo_b.neg_reset fifo8_equivalence_check_tb.fifo_b.re_en fifo8_equivalence_check_tb.fifo_b.re_ptr fifo8_equivalence_check_tb.fifo_b.wr_en fifo8_equivalence_check_tb.fifo_b.wr_ptr fifo8_equivalence_check_tb.fifo_s.clk fifo8_equivalence_check_tb.fifo_s.data_in fifo8_equivalence_check_tb.fifo_s.data_out fifo8_equivalence_check_tb.fifo_s.decoder_out fifo8_equivalence_check_tb.fifo_s.empty fifo8_equivalence_check_tb.fifo_s.fifo_mem_output fifo8_equivalence_check_tb.fifo_s.full fifo8_equivalence_check_tb.fifo_s.neg_reset fifo8_equivalence_check_tb.fifo_s.outmux fifo8_equivalence_check_tb.fifo_s.re_empty_en fifo8_equivalence_check_tb.fifo_s.re_en fifo8_equivalence_check_tb.fifo_s.re_ptr fifo8_equivalence_check_tb.fifo_s.wr_en fifo8_equivalence_check_tb.fifo_s.wr_full_en fifo8_equivalence_check_tb.fifo_s.wr_ptr
+Created probe 1
 xcelium> run
 ========================================
-Starting Smart FIFO Verification...
+Starting Integrated Equivalence Check...
 ========================================
-[PASS] TEST 1: Reset correct (empty_b=1, full_b=0)
- [               40000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [               60000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [               80000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [              100000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [              120000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [              140000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [              160000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(0,0) Struct(0,0)
- [              180000] SCOREBOARD: Match! Data: xxxxxxxxxxxxxxxx | Flags (F,E): behave(1,0) Struct(1,0)
-[PASS] TEST 2: FIFO full_b logic verified
- [              200000] SCOREBOARD: Match! Data: 0000000000000001 | Flags (F,E): behave(0,0) Struct(0,0)
- [              220000] SCOREBOARD: Match! Data: 0000000000000002 | Flags (F,E): behave(0,0) Struct(0,0)
- [              240000] SCOREBOARD: Match! Data: 0000000000000003 | Flags (F,E): behave(0,0) Struct(0,0)
- [              260000] SCOREBOARD: Match! Data: 0000000000000004 | Flags (F,E): behave(0,0) Struct(0,0)
- [              280000] SCOREBOARD: Match! Data: 0000000000000005 | Flags (F,E): behave(0,0) Struct(0,0)
- [              300000] SCOREBOARD: Match! Data: 0000000000000006 | Flags (F,E): behave(0,0) Struct(0,0)
- [              320000] SCOREBOARD: Match! Data: 0000000000000007 | Flags (F,E): behave(0,0) Struct(0,0)
- [              340000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,1) Struct(0,1)
-[PASS] TEST 3: FIFO empty_b logic verified
- [              360000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
- [              380000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
- [              400000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
- [              420000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
- [              440000] SCOREBOARD: Match! Data: 0000000000000008 | Flags (F,E): behave(0,0) Struct(0,0)
- [              460000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              480000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              500000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              520000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              540000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,1) Struct(0,1)
- [              560000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              580000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              600000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              620000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              640000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              660000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              680000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(0,0) Struct(0,0)
- [              700000] SCOREBOARD: Match! Data: 000000000000aaaa | Flags (F,E): behave(1,0) Struct(1,0)
-[PASS] TEST 4: Pointer wrap-around works perfectly
-TEST 5: Ping-Pong on full_b condition...
- [              720000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(1,0) Struct(1,0)
-[PASS] TEST 5: Simultaneous R/W allowed on full_b. FIFO remained full_b.
- [              740000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              760000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              780000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              800000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              820000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              840000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              860000] SCOREBOARD: Match! Data: 000000000000bbbb | Flags (F,E): behave(0,0) Struct(0,0)
- [              880000] SCOREBOARD: Match! Data: 000000000000cccc | Flags (F,E): behave(0,1) Struct(0,1)
-TEST 6: Ping-Pong on empty_b condition...
- [              900000] SCOREBOARD: Match! Data: 000000000000cccc | Flags (F,E): behave(0,0) Struct(0,0)
-[PASS] TEST 6: Read blocked safely, Write passed.
-TEST 7: Normal Ping-Pong (Mid-level)...
- [              920000] SCOREBOARD: Match! Data: 000000000000dddd | Flags (F,E): behave(0,0) Struct(0,0)
-[PASS] TEST 7: Normal Ping-Pong passed.
-TEST 8: Async Reset execution...
-[PASS] TEST 8: Async Reset instantly interrupted operation.
+ [               30000] MATCH: Data=xxxxxxxxxxxxxxxx | Flags (F,E): Beh(0,0) Str(0,0)
+ [               50000] MATCH: Data=xxxxxxxxxxxxxxxx | Flags (F,E): Beh(0,0) Str(0,0)
+ [               70000] MATCH: Data=xxxxxxxxxxxxxxxx | Flags (F,E): Beh(0,0) Str(0,0)
+ [               90000] MATCH: Data=xxxxxxxxxxxxxxxx | Flags (F,E): Beh(0,0) Str(0,0)
+ [              110000] MATCH: Data=xxxxxxxxxxxxxxxx | Flags (F,E): Beh(0,0) Str(0,0)
+ [              130000] MATCH: Data=000000000000aaaa | Flags (F,E): Beh(0,0) Str(0,0)
+ [              150000] MATCH: Data=000000000000aaaa | Flags (F,E): Beh(0,0) Str(0,0)
+ [              170000] MATCH: Data=000000000000aaaa | Flags (F,E): Beh(0,0) Str(0,0)
+ [              190000] MATCH: Data=000000000000aaaa | Flags (F,E): Beh(0,0) Str(0,0)
+ [              210000] MATCH: Data=000000000000aaaa | Flags (F,E): Beh(0,1) Str(0,1)
+Testing Underflow: 3 Ping-Pongs on EMPTY...
+ [              230000] MATCH: Data=000000000000aaaa | Flags (F,E): Beh(0,0) Str(0,0)
+ [              240000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              250000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+Testing Overfill: 9 consecutive writes...
+ [              270000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              290000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              310000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              330000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              350000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              370000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(0,0) Str(0,0)
+ [              390000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(1,0) Str(1,0)
+ [              410000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(1,0) Str(1,0)
+ [              430000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(1,0) Str(1,0)
+[PASS] Scenario 2: Full detected. 9th write blocked correctly.
+Testing Full-Throughput: 4 Ping-Pongs on FULL...
+ [              450000] MATCH: Data=000000000000bbbb | Flags (F,E): Beh(1,0) Str(1,0)
+ [              460000] MATCH: Data=0000000000000001 | Flags (F,E): Beh(1,0) Str(1,0)
+ [              470000] MATCH: Data=0000000000000002 | Flags (F,E): Beh(1,0) Str(1,0)
+ [              480000] MATCH: Data=0000000000000003 | Flags (F,E): Beh(1,0) Str(1,0)
+[PASS] Scenario 3: FIFO remained Full during simultaneous R/W.
+Testing Reset Recovery...
+ [              510000] MATCH: Data=0000000000000003 | Flags (F,E): Beh(0,0) Str(0,0)
+ [              530000] MATCH: Data=0000000000001234 | Flags (F,E): Beh(0,1) Str(0,1)
+[PASS] Scenario 4: Post-reset recovery matched.
 ========================================
-Verification Complete.
+Equivalence Verification Complete.
 ========================================
-Simulation complete via $finish(1) at time 987 NS + 0
-./fifo8_equal_check_TB.v:185         #50 $finish;
-xcelium> exit
-TOOL:	xrun(64)	23.09-s013: Exiting on Mar 13, 2026 at 14:07:29 UTC  (total: 00:00:04)
+Simulation complete via $finish(1) at time 580 NS + 0
+./fifo8_equal_check_TB.v:142         #50 $finish;
+xcelium> 

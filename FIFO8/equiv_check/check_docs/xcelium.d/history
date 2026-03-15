@@ -1,0 +1,13 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(13Mar2026:14:01:52):( xrun fifo8_equal_check_TB.v -incdir fifo8_structural +access+rwc )
+s2::(13Mar2026:14:03:45):( xrun fifo8_equal_check_TB.v -incdir fifo8_structural +access+rwc )
+s3::(13Mar2026:14:07:26):( xrun fifo8_equal_check_TB.v -incdir fifo8_structural +access+rwc )
+s4::(15Mar2026:10:59:23):( xrun fifo8_equal_check_TB.v -incdir fifo8_structural +access+rwc )
+s5::(15Mar2026:11:02:07):( xrun fifo8_equal_check_TB.v -incdir fifo8_structural +access+rwc )
+s6::(15Mar2026:11:03:07):( xrun fifo8_equivalence_check_tb.v -incdir ../fifo8_structural +access+rwc -gui )
+s7::(15Mar2026:11:03:20):( xrun fifo8_equivalence_check_tb.v -incdir ../fifo8_structural +access+rwc )
+s8::(15Mar2026:11:03:54):( xrun fifo8_equal_check_TB.v -incdir fifo8_structural +access+rwc )
+s9::(15Mar2026:11:06:26):( xrun fifo8_equal_check_TB.v -incdir ../fifo8_structural -incdir ../fifo8_structural/counter -incdir ../fifo8_structural/decoder3to8 -incdir ../fifo8_structural/mux8to3_64b -incdir ../fifo8_structural/reg64b_en +access+rwc -gui )

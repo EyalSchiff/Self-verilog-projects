@@ -1,0 +1,14 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-INCDIR
+../fifo8_structural
+-INCDIR
+../fifo8_structural/counter
+-INCDIR
+../fifo8_structural/decoder3to8
+-INCDIR
+../fifo8_structural/mux8to3_64b
+-INCDIR
+../fifo8_structural/reg64b_en

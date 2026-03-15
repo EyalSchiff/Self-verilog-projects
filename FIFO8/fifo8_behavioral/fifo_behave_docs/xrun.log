@@ -1,7 +1,7 @@
 xrun(64): 23.09-s013: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s013: Started on Mar 13, 2026 at 12:02:20 UTC
+TOOL:	xrun(64)	23.09-s013: Started on Mar 15, 2026 at 10:53:49 UTC
 xrun
-	fifo_behavioral2.v
+	fifo_behavioral.v
 	fifo_behavioral_TB.v
 	+access+rwc
 	-gui
@@ -43,7 +43,7 @@ xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds.li
 SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
 |
 xmvlog: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
-file: fifo_behavioral2.v
+file: fifo_behavioral.v
 	module worklib.fifo_behavioral:v
 		errors: 0, warnings: 0
 file: fifo_behavioral_TB.v
@@ -81,21 +81,21 @@ xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,13): cds
 SOFTINCLUDE $EMXHOME/emxinterface/cds.lib
 |
 xmvlog_cg: *W,DLCVAR (/tools/rubyeda/RubySKILL/r20251120.2/cds.site.lib,15): cds.lib Invalid environment variable ''.
-		worklib.fifo_behavioral:v <0x13106a10>
-			streams:   6, words:  2456
-		worklib.fifo_behavioral_tb:v <0x4ab41efa>
-			streams:   9, words: 26040
+		worklib.fifo_behavioral:v <0x0f692cdc>
+			streams:   6, words:  2693
+		worklib.fifo_behavioral_tb:v <0x2fc7ce3b>
+			streams:   9, words: 18078
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
 		Modules:                 2       2
-		Registers:              10      10
+		Registers:              11      11
 		Scalar wires:            6       -
 		Vectored wires:          2       -
 		Always blocks:           2       2
 		Initial blocks:          1       1
-		Cont. assignments:       2       3
+		Cont. assignments:       1       2
 		Pseudo assignments:      5       -
 		Process Clocks:          1       1
 		Simulation timescale:  1ps
@@ -114,29 +114,25 @@ xcelium>
 xcelium> source /tools/cadence/XCELIUM/23.09.013/tools/xcelium/files/xmsimrc
 xcelium> database -open waves -into waves.shm -default
 Created default SHM database waves
-xcelium> probe -create -shm fifo_behavioral_tb.clk fifo_behavioral_tb.data_in fifo_behavioral_tb.data_out fifo_behavioral_tb.empty fifo_behavioral_tb.full fifo_behavioral_tb.i fifo_behavioral_tb.neg_reset fifo_behavioral_tb.re_en fifo_behavioral_tb.wr_en
+xcelium> probe -create -shm fifo_behavioral_tb.uut.clk fifo_behavioral_tb.uut.data_in fifo_behavioral_tb.uut.data_out fifo_behavioral_tb.uut.empty fifo_behavioral_tb.uut.fifo_mem fifo_behavioral_tb.uut.full fifo_behavioral_tb.uut.neg_reset fifo_behavioral_tb.uut.re_en fifo_behavioral_tb.uut.re_ptr fifo_behavioral_tb.uut.wr_en fifo_behavioral_tb.uut.wr_ptr
 Created probe 1
 xcelium> run
 ========================================
-Starting Smart FIFO Verification...
+Starting Integrated FIFO Stress Test...
 ========================================
-[PASS] TEST 1: Reset correct (Empty=1, Full=0)
-[PASS] TEST 2: FIFO Full logic verified
-[PASS] TEST 3: FIFO Empty logic verified
-[PASS] TEST 4: Pointer wrap-around works perfectly
-TEST 5: Ping-Pong on FULL condition...
-[PASS] TEST 5: Simultaneous R/W allowed on full. FIFO remained FULL.
-TEST 6: Ping-Pong on EMPTY condition...
-[PASS] TEST 6: Read blocked safely, Write passed.
-TEST 7: Normal Ping-Pong (Mid-level)...
-[PASS] TEST 7: Normal Ping-Pong passed.
-TEST 8: Async Reset execution...
-[PASS] TEST 8: Async Reset instantly interrupted operation.
+Checking Underflow on Empty...
+[PASS] Scenario 1: Empty handled correctly, no garbage read.
+Writing 9 consecutive items to FIFO8...
+[PASS] Scenario 2: Full detected. 9th write ignored safely.
+Testing 4 Ping-Pongs while FULL...
+[PASS] Scenario 3: Sustained FULL state during R/W throughput.
+Applying Reset and checking first entry recovery...
+[PASS] Scenario 4: Reset successful, First entry is correct.
 ========================================
-Verification Complete.
+Integrated Verification Complete.
 ========================================
-Simulation complete via $finish(1) at time 987 NS + 0
-./fifo_behavioral_TB.v:149         #50 $finish;
+Simulation complete via $finish(1) at time 460 NS + 0
+./fifo_behavioral_TB.v:114         #50 $finish;
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	23.09-s013: Exiting on Mar 13, 2026 at 12:15:50 UTC  (total: 00:13:30)
+TOOL:	xrun(64)	23.09-s013: Exiting on Mar 15, 2026 at 10:59:01 UTC  (total: 00:05:12)

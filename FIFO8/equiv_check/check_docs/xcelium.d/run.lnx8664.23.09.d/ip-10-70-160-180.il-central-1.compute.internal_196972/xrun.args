@@ -1,0 +1,17 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+fifo8_equal_check_TB.v
+-incdir
+../fifo8_structural
+-incdir
+../fifo8_structural/counter
+-incdir
+../fifo8_structural/decoder3to8
+-incdir
+../fifo8_structural/mux8to3_64b
+-incdir
+../fifo8_structural/reg64b_en
++access+rwc
+-gui

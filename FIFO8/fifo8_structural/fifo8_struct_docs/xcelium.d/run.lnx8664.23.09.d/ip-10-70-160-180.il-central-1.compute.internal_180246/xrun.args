@@ -1,9 +1,0 @@
-//
-// File created by:  xrun
-// Do not modify this file
-//
-fifo8_structural.v
-fifo8_structural_TB.v
-+access+rwc
--gui
--clean

@@ -81,7 +81,7 @@ module Locker16_system_TB;
             end
 
 
-        // --- STEP 2: FILL ALL 16 LOCKERS ---
+        //  FILL ALL 16 LOCKERS ---
         $display("Filling all 16 lockers...");
         repeat(16) begin
             @(negedge clk);
@@ -151,9 +151,6 @@ module Locker16_system_TB;
         push_valid = 1'b1;
         push_address = 4'd12;
         $display("pop address now is %d " ,pop_address );
-
-
-
 
 
 
